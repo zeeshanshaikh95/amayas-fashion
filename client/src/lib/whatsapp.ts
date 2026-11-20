@@ -28,7 +28,9 @@ export function buildCartMessage(settings: PublicSettings, items: CartItem[]): s
 
   const totalLine = items.length
     ? hasUnpriced
-      ? `${formatPrice(total)} + items pending price confirmation`
+      ? total > 0
+        ? `${formatPrice(total)} + items pending price confirmation`
+        : 'Price on request'
       : formatPrice(total)
     : formatPrice(null);
 
