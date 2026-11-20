@@ -138,8 +138,8 @@ from `server/.env`. The first login forces a password change.
 
 1. **Frontend (GitHub Pages):** the included workflow builds with `VITE_DEMO_MODE=true`
    and publishes `client/dist`. Enable Pages → Source: GitHub Actions.
-2. **API (Render):** create a Blueprint from `render.yaml`, add a MongoDB Atlas URI and
-   the first-admin credentials in the Render dashboard.
+2. **API (Render):** [create the Blueprint from this repo](https://render.com/deploy?repo=https://github.com/zeeshanshaikh95/amayas-fashion),
+   then add a MongoDB Atlas URI and the first-admin credentials in the Render dashboard.
 3. **Connect the two:** set the repository variable `VITE_API_BASE_URL` to the Render URL,
    switch `VITE_DEMO_MODE` to `false`, push, and the admin panel goes live.
 
